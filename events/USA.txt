@@ -1,0 +1,900 @@
+add_namespace = usa_collapse
+add_namespace = usa_rockefeller_jr
+add_namespace = usa
+
+news_event = {
+	id = usa_collapse.1
+	title = usa_collapse.1.t
+	desc = usa_collapse.1.d
+	picture = GFX_news_event_USA_JDR_dead
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				tag = USA
+			}
+			log = "[GetDateText]: [Root.GetName]: event usa_collapse.1"
+			hidden_effect = {
+				country_event = {
+					id = usa_collapse.15
+					days = 14
+				}
+
+				USA_john_d_rockfeller = {
+					retire = yes
+				}
+				promote_character = USA_board_of_directors
+			}
+		}
+	}
+	
+	option = {
+		name = usa_collapse.1.a
+
+}
+}		
+country_event = {
+	id = usa_collapse.15
+	title = usa_collapse.15.t
+	desc = usa_collapse.15.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.15"
+		
+		hidden_effect = {
+			USA_board_of_directors = {
+				retire = yes
+			}
+			country_event = {
+				id = usa_collapse.2
+				days = 14
+			}
+
+		}
+	}
+	
+	option = {
+		name = usa_collapse.15.a
+		load_focus_tree = USA_rockefeller_jr
+	JAP = {
+			country_event = {
+					id = jap.1
+					days = 2
+				}
+	}
+	}
+}
+country_event = { #SHIT BEGINS
+	id = usa_collapse.2
+	title = usa_collapse.2.t
+	desc = usa_collapse.2.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.2"
+		
+		hidden_effect = {
+			USA_release_ASF = yes
+			country_event = {
+				id = usa_collapse.5
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = usa_collapse.2.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = { #буржуи ебаные 
+	id = usa_collapse.5
+	title = usa_collapse.5.t
+	desc = usa_collapse.5.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.5"
+		hidden_effect = {
+			USA_release_FOC = yes
+			country_event = {
+				id = usa_collapse.10
+				id = usa_collapse.8
+				days = 5
+			}
+			deactivate_advisor = USA_ford_hog
+			activate_advisor = USA_vacant_hog
+		}
+	}
+	
+	option = {
+		name = usa_collapse.5.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = usa_collapse.5.b
+		ai_chance = {
+			factor = 0
+			}
+		FOC = {
+			change_tag_from = USA
+		}
+		}
+	}
+country_event = { #та самая сук мышь
+#	id = usa_collapse.10
+#	title = usa_collapse.10.t
+#	desc = usa_collapse.10.d
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		log = "[GetDateText]: [Root.GetName]: event usa_collapse.10"
+#		hidden_effect = {
+#			USA_release_DIC = yes
+#			country_event = {
+#				id = usa_collapse.8
+#				days = 10
+#			}
+#		}
+#	}
+#
+#	option = {
+#		name = usa_collapse.10.a
+#		
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}
+#	
+#	option = {
+#		name = usa_collapse.10.b
+#		
+#		ai_chance = {
+#			factor = 0
+#		}
+#		
+#		DIC = {
+#			change_tag_from = USA
+#		}
+#	}
+#}
+country_event = { 
+	id = usa_collapse.8
+	title = usa_collapse.8.t
+	desc = usa_collapse.8.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.8"
+		hidden_effect = {
+			USA_release_KKK = yes
+			country_event = {
+				id = usa_collapse.11
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = usa_collapse.8.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = usa_collapse.8.b
+		ai_chance = {
+			factor = 0
+		}
+
+		KKK = {
+			change_tag_from = USA
+		}
+	}
+}
+country_event = { #ААААААААААААААААА НЕГРЫ
+	id = usa_collapse.11
+	title = usa_collapse.11.t
+	desc = usa_collapse.11.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.11"
+		
+		hidden_effect = {
+			USA_release_BRE = yes
+			country_event = {
+				id = usa_collapse.9
+				days = 6
+			}
+		}
+	}
+
+	option = {
+		name = usa_collapse.11.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			KKK = {
+				declare_war_on = {
+					target = BRE
+					type = annex_everything
+				}
+				add_civil_war_target = BRE					
+			}
+		}
+	}
+}
+country_event = { #идём снимать вестерны
+	id = usa_collapse.9
+	title = usa_collapse.9.t
+	desc = usa_collapse.9.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.9"
+		hidden_effect = {
+			USA_release_TEX = yes
+			country_event = {
+				id = usa_collapse.12
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = usa_collapse.9.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = { #california
+	id = usa_collapse.12
+	title = usa_collapse.12.t
+	desc = usa_collapse.12.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.12"
+		
+		hidden_effect = {
+			USA_release_CAL = yes
+			CAL = {
+				load_oob = "CAL"
+			}
+			country_event = {
+				id = usa_collapse.3
+				days = 4
+			}
+		}
+	}
+	
+	option = {
+		name = usa_collapse.12.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+country_event = { #military says bye
+	id = usa_collapse.3
+	title = usa_collapse.3.t
+	desc = usa_collapse.3.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.3"
+		hidden_effect = {
+			USA_release_CCC = yes
+			CCC = {
+				diplomatic_relation = {
+					country = TEX
+					relation = non_aggression_pact
+					active = yes
+				}	
+				diplomatic_relation = {
+					country = TEX
+					relation = military_access
+					active = yes
+				}	
+				diplomatic_relation = {
+					country = TEX
+					relation = docking_rights
+					active = yes
+				}				
+			}
+			TEX = {
+				diplomatic_relation = {
+					country = CCC
+					relation = non_aggression_pact
+					active = yes
+				}	
+				diplomatic_relation = {
+					country = CCC
+					relation = military_access
+					active = yes
+				}	
+				diplomatic_relation = {
+					country = CCC
+					relation = docking_rights
+					active = yes
+				}				
+			}
+			set_cosmetic_tag = USA_JDR
+			country_event = {
+				id = usa_collapse.6
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = usa_collapse.3.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = usa_collapse.3.b
+		ai_chance = {
+			factor = 0
+		}
+		
+		CCC = {
+			change_tag_from = USA
+		}
+	}
+}
+country_event = { #Masons 
+	id = usa_collapse.6
+	title = usa_collapse.6.t
+	desc = usa_collapse.6.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.6"
+		
+		hidden_effect = {
+			USA_release_PEN = yes
+			country_event = {
+				id = usa_collapse.14
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = usa_collapse.6.a
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+# country_event = { 
+#	id = usa_collapse.14
+#	title = usa_collapse.14.t
+#	desc = usa_collapse.14.d
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		log = "[GetDateText]: [Root.GetName]: event usa_collapse.14"
+#		hidden_effect = {
+#			USA_release_FTS = yes
+#			country_event = {
+#				id = usa_collapse.13
+#				days = 8
+#			}
+#		}
+#	}
+#
+#	option = {
+#		name = usa_collapse.14.a
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}	
+#	
+#	option = {
+#		name = usa_collapse.14.b
+#		ai_chance = {
+#			factor = 0
+#		}
+#		
+#		FTS = {
+#			change_tag_from = USA
+#		}
+#	}
+# }
+
+
+
+
+
+country_event = { 
+	id = usa_collapse.14
+	title = usa_collapse.14.t
+	desc = usa_collapse.14.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.6"
+		
+		hidden_effect = {
+			USA_release_ORG = yes
+			country_event = {
+				id = usa_collapse.17
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = usa_collapse.14.a
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = { #Washingtonians
+	id = usa_collapse.17
+	title = usa_collapse.17.t
+	desc = usa_collapse.17.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.17"
+		
+		hidden_effect = {
+			USA_release_WSH = yes
+			country_event = {
+				id = usa_collapse.16
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = usa_collapse.17.a
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = { #Mormons
+	id = usa_collapse.16
+	title = usa_collapse.16.t
+	desc = usa_collapse.16.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.16"
+		
+		hidden_effect = {
+			USA_release_IDA = yes
+			country_event = {
+				id = usa_collapse.13
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = usa_collapse.16.a
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Alaska
+	id = usa_collapse.13
+	title = usa_collapse.13.t
+	desc = usa_collapse.13.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.13"
+		hidden_effect = {
+			
+			USA = {
+			remove_ideas = USA_alaskan_concentration_camps
+			}
+		
+		
+			country_event = {
+				id = usa_collapse.7
+				days = 8
+			}
+			country_event = {
+				id = usa_collapse.18
+				days = 20
+			}
+			USA_release_ALA = yes
+		}
+	}
+
+	option = {
+		name = usa_collapse.13.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+}
+country_event = { #New York
+	id = usa_collapse.7
+	title = usa_collapse.7.t
+	desc = usa_collapse.7.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.7"
+		
+		hidden_effect = {
+			USA_release_NYC = yes
+			country_event = {
+				id = usa_collapse.4
+				days = 8
+			}
+		}
+	}
+
+
+	option = {
+		name = usa_collapse.7.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = { 
+	id = usa_collapse.4
+	title = usa_collapse.4.t
+	desc = usa_collapse.4.d
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event usa_collapse.4"
+		hidden_effect = {
+			USA_release_NEE = yes
+		}
+		USA = {
+		    every_country_division = { destroy_unit = yes }
+		}
+		load_oob = USA_new
+		hidden_effect = {
+			country_event = {
+				id = usa_collapse.20
+				days = 5
+			}
+		}
+	}
+	
+	option = {
+		name = usa_collapse.4.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = usa_collapse.18
+	title = usa_collapse.18.t
+	desc = usa_collapse.18.d
+	is_triggered_only = yes
+	
+	immediate = {
+	    PAN = {
+			set_state_owner = 685
+		}
+	}
+	
+	option = {
+		name = usa_collapse.18.a
+		ai_chance = {
+			factor = 100
+		}
+		PAN = {
+			set_state_owner = 685
+		}
+	}
+}
+
+news_event = { 
+	id = usa_collapse.20
+	title = usa_collapse.20.t
+	desc = usa_collapse.20.d
+	is_triggered_only = yes
+	major = yes
+	picture = GFX_news_event_USA_civil_war
+	
+	option = {
+		name = usa_collapse.20.a
+		set_global_flag = usa_collapsed
+		#trigger mexican war
+		MEX = {
+			country_event = {
+				id = mex_civ.1
+				days = 120
+				random_hours = 12
+				random_days = 30
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		show_superevent_USA_civil_war = yes
+	}
+}
+
+country_event = {
+	id = usa_rockefeller_jr.1
+	title = usa_rockefeller_jr.1.t
+	desc = usa_rockefeller_jr.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = usa_rockefeller_jr.1.a
+		add_political_power = -75
+		hidden_effect = {
+			set_global_flag = USA_columbia_deal
+		}
+		custom_effect_tooltip = USA_corporate_deal_tt
+	}
+	option = {
+		name = usa_rockefeller_jr.1.b
+		add_political_power = 25
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = usa_rockefeller_jr.2
+	title = usa_rockefeller_jr.2.t
+	desc = usa_rockefeller_jr.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = usa_rockefeller_jr.2.alpha
+		hidden_effect = {
+			set_politics = {
+    			ruling_party = conservatism
+   	 			elections_allowed = no
+			}
+			complete_national_focus = USA_victory_of_william_randolf
+		}
+	}
+	option = {
+		name = usa_rockefeller_jr.2.beta
+		hidden_effect = {
+			set_politics = {
+    			ruling_party = authoritarian_democrat
+   	 			elections_allowed = no
+			}
+			complete_national_focus = USA_andrew_mellon_secures_power
+		}
+	}
+	option = {
+		name = usa_rockefeller_jr.2.gamma
+		hidden_effect = {
+			complete_national_focus = USA_the_legitimate_successor
+		}
+	}
+	option = {
+		name = usa_rockefeller_jr.2.delta
+		hidden_effect = {
+			complete_national_focus = USA_edward_l_dohney_will_continue_the_dream
+		}
+	}
+	option = {
+		name = usa_rockefeller_jr.2.epsilon
+		hidden_effect = {
+			set_politics = {
+    			ruling_party = national_syndicalism
+   	 			elections_allowed = no
+			}
+			complete_national_focus = USA_charles_m_schwab_will_make_them_fear
+		}
+	}
+}
+
+country_event = {
+	id = usa_rockefeller_jr.3
+	title = usa_rockefeller_jr.3.t
+	desc = usa_rockefeller_jr.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = usa_rockefeller_jr.3.a
+		add_political_power = 15
+		add_stability = 0.15
+		hidden_effect = {
+			set_global_flag = USA_hearst_deal
+		}
+	}
+	option = {
+		name = usa_rockefeller_jr.3.b
+		add_political_power = -20
+		add_stability = -0.2
+	}
+}
+
+country_event = {
+	id = usa_rockefeller_jr.4
+	title = usa_rockefeller_jr.4.t
+	desc = usa_rockefeller_jr.4.d
+	is_triggered_only = yes
+
+	option = {
+		name = usa_rockefeller_jr.4.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = usa_rockefeller_jr.5
+	title = usa_rockefeller_jr.5.t
+	desc = usa_rockefeller_jr.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = usa_rockefeller_jr.5.a
+		add_political_power = 25
+		army_experience = 40
+		add_command_power = 15
+	}
+}
+
+country_event = {
+	id = usa_rockefeller_jr.6
+	title = usa_rockefeller_jr.6.t
+	desc = usa_rockefeller_jr.6.d
+	is_triggered_only = yes
+
+	option = {
+		name = usa_rockefeller_jr.6.a
+		add_war_support = 0.04
+		add_stability = -0.03
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = usa_rockefeller_jr.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bloodandsoil.1" }
+	title = usa_rockefeller_jr.7.t
+	desc = usa_rockefeller_jr.7.d
+	is_triggered_only = yes
+
+	option = {
+		name = usa_rockefeller_jr.7.a
+		ai_chance = {
+			base = 19
+		}
+		USA = {
+			annex_country = { 
+				target = ALA
+				transfer_troops = yes 
+			}
+		}
+		ALA = {
+			every_unit_leader = {
+				set_nationality = USA
+			}
+		}
+	}
+	
+	option = {
+		name = usa_rockefeller_jr.7.b
+		ai_chance = {
+			base = 1
+			}
+		ALA = {
+			add_war_support = 0.05
+			add_stability = -0.1
+		}
+	    USA = {
+			declare_war_on = {
+				target = ALA
+				type = annex_everything
+			}
+		}
+	}
+	}
+country_event = {
+	id = usa_rockefeller_jr.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uvs.2" }
+	title = usa_rockefeller_jr.8.t
+	desc = usa_rockefeller_jr.8.d
+	picture = GFX_report_event_soviet_people
+	is_triggered_only = yes
+
+	option = {
+		name = usa_rockefeller_jr.8.a
+		ai_chance = {
+			base = 10
+		}
+		USA = {
+			set_autonomy = {
+				target = CUB
+				autonomous_state = autonomy_puppet
+				end_wars = no
+				end_civil_wars = no
+			}
+		}
+	}
+	option = {
+		name = usa_rockefeller_jr.8.b
+		ai_chance = { base = 0 }
+		USA = {
+			declare_war_on = {
+				target = CUB
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+
+country_event = {
+	id = usa.1 #Return to Washington DC
+	title = usa.1.t
+	desc = usa.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = usa.1.a
+		set_capital = { state = 1191 }
+	}
+}
+
+country_event = {
+	id = usa.3
+	title = usa.3.t
+	desc = usa.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = usa.3.a
+		ai_chance = { base = 4 }
+		FROM = {
+			create_wargoal = {
+				target = ALA
+				type = annex_everything
+			}
+		}
+	}
+	
+	option = {
+		name = usa.3.b
+		ai_chance = { base = 6 }
+	    FROM = {
+			annex_country = { 
+				target = ALA
+				transfer_troops = yes
+			}
+		}
+		
+	}
+}

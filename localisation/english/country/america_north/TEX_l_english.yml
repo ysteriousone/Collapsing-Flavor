@@ -1,0 +1,236 @@
+﻿l_english:
+
+ ### Leaders ###
+
+ TEX_pat_morris: "Pat Morris Neff"
+ TEX_colonel_house: "Edward M. House"
+ TEX_john_norris: "John Frank Norris"
+ TEX_r_b_creager: "R. B. Creager"
+ TEX_james_ferguson: "James Ferguson"
+ TEX_miriam_ferguson: "Miriam Ferguson"
+ TEX_john_garner: "John Garner"
+ TEX_maury_maverick: "Maury Maverick"
+ TEX_harry_wurzbach: "Harry Wurzbach"
+ TEX_albert_burleson: "Albert S. Burleson"
+ TEX_alvin_owsley: "Alvin Owsley"
+ TEX_jesse_jones: "Jesse H. Jones"
+ TEX_william_hobby: "William Hobby"
+
+ ### LEADERS DESCRIPTIONS ###
+
+ POLITICS_NEFF_DESC: "§tBorn:§! November 26th, 1871, in Coryell County, United States of America.\n§tReligion:§! Baptism\n§tNationality:§! American" # \n§tInformation:§! 
+
+ ### Traits ###
+
+ TEX_democratic_dictator: "Democratic Dictator"
+
+ ### Party Names ###
+  
+ TEX_bolshevism_party: "§XCPT§!"
+ TEX_bolshevism_party_long: "§XCommunist Party of Texas§!"
+ TEX_marxism_party: "§xSPT§!"
+ TEX_marxism_party_long: "§xSocial Party of Texas§!"
+ TEX_libertarian_socialism_party: "§IIWW§!"
+ TEX_libertarian_socialism_party_long: "§IIndustrial Workers of the World§!"
+ TEX_social_democrat_party: "§MTPP§!"
+ TEX_social_democrat_party_long: "§MTexan People's Party§!"
+ TEX_liberalism_party: "§iRP§!"
+ TEX_liberalism_party_long: "§iRepublican Party§!"
+ TEX_conservatism_party: "§mDP§!"
+ TEX_conservatism_party_long: "§mDemocratic Party§!"
+ TEX_authoritarian_democrat_party: "§dNDP§!"
+ TEX_authoritarian_democrat_party_long: "§dNew Democratic Party§!"
+ TEX_despotism_party: "§DNDP§!"
+ TEX_despotism_party_long: "§DNew Democratic Party§!"
+ TEX_reactionism_party: "§rTBP§!"
+ TEX_reactionism_party_long: "§rTexas Baptists Party§!"
+ TEX_national_syndicalism_party: "§yTFP§!"
+ TEX_national_syndicalism_party_long: "§yTexas First Party§!"
+ TEX_esotericism_party: "§R[BANNED]§!"
+ TEX_esotericism_party_long: "§yKu Klux Klan§!" 
+ 
+ TEX_confederate_party: "§yTCP§!"
+ TEX_confederate_party_long: "§yTexan Confederate Party§!" 
+
+ ### Focuses ###
+
+ # Main #
+ TEX_the_lone_star: "The Lone Star"
+ TEX_look_to_the_past: "Look to the Past"
+ TEX_democracy_failed: "Democracy Failed"
+ TEX_rampant_corruption: "Rampant Corruption"
+ TEX_look_to_the_future: "Look to the Future"
+ TEX_nation_first: "The Nation First"
+ TEX_people_first: "The People First"
+ TEX_texas_on_its_own: "Better off Alone"
+ TEX_a_better_usa: "A Better America"
+ TEX_southern_pride: "Southern Pride"
+ TEX_confederate_villain: "Condemn The Confederacy"
+ TEX_confederate_hero: "Celebrate The Confederacy"
+ TEX_texan_nationalism: "Texan Nationalism"
+ TEX_american_nationalism: "American Nationalism"
+ TEX_contentious_politics: "Contentious Politics"
+ TEX_kkk_moderates: "Work With The Moderates"
+ TEX_crush_kkk: "Crush The Klan"
+ TEX_crush_kkk_radicals: "Kick Out The Radicals"
+ TEX_condone_socialism: "Condone Social Programs"
+ TEX_state_of_elections: "State of Elections"
+ TEX_election: "An Honest Election"
+ TEX_no_election: "Stall Elections"
+ TEX_scodem_victory: "SPT Victory"
+ TEX_lib_victory: "TPP Victory"
+ TEX_eternal_president: "The Eternal President"
+ TEX_reactionary_coup: "Baptist Coup"
+ TEX_arrest_gov: "Arrest Government Officials"
+ TEX_consolidate_power: "Consolidate Executive Powers"
+ TEX_deal_with_outroar: "Declare Martial Law"
+ TEX_expose_NDP_politicians: "Expose The NDP"
+ TEX_seek_scodem_support: "Ban The NDP"
+ TEX_end_of_the_NDP: "End of The NDP"
+ TEX_pause_fed_elections_quote: ""Pause" Federal Elections"
+ TEX_pause_fed_elections_base: "Pause Federal Elections"
+ TEX_pause_fed_elections: "[TEX_pause_fed_elections_def]"
+ TEX_texan_endurance: "Texan Endurance"
+ TEX_american_strength: "American Strength"
+ TEX_take_out_opposition: "Control the Media"
+ TEX_control_their_minds: "Control their Minds"
+
+ #klan tree #
+ TEX_raid_klan_meetings: "Crash Klan Meetings"
+ TEX_anti_klan_propaganda: "Anti-Klan Propaganda"
+ TEX_pain_in_the_ass: "A Pain In The Ass"
+ TEX_what_do_we_do_with_them: "What Do We Do With Them"
+ TEX_take_the_fight_to_them: "Take The Fight To Them"
+ TEX_kill_klan_leaders: "Capture Klan Leaders"
+ TEX_offer_stability: "Offer "Stability""
+
+ #war tree
+ TEX_traitor_ccc: "[TEX_traitor_ccc_def]"
+ TEX_traitor_ccc_kill: "Stab Them In The Back!"
+ TEX_traitor_ccc_norm: "Traitors In Blue!"
+ TEX_kill_ford: "Richer and..."
+ TEX_kill_the_rich: "Richest"
+
+
+ # Economic #
+ TEX_destroy_the_corporatocracy: "Complete Corporate Destruction"
+ TEX_destroy_the_corporatocracy_desc: "These corporations and businessmen are all the same. They want to take away the money of the people through slavery, usury and all the other sins of the book. We, as America's defenders cannot accept this. We cannot let out people ever be slaves to these evil men in suits. It is our duty to forcefully dismantle all the minor corporations present in our controlled states and to make sure the monopolies which existed during the Rockefeller Regime never show up again and haunt the American people."
+ TEX_intervene_in_the_economy: "Seize Corporate Assets"
+ TEX_intervene_in_the_economy_desc: "We cannot just tell these companies to stop treating people like trash. We need to force them do so. Unfortunately, while this practice might be viewed criticlaly by some economists and politcians, as a country we will need to switch to a more interventionist economic system for the time being with a big amount of state control never seen in American history. But as they say: Radical times require radical measures"
+ TEX_develop_our_infrastructure_desc: "We must connect the American nation. The old backward system of infrastructure and roads ultimately led to the failure of the Revolution of 1916 because the cells werent able to actively support one another which enabled the more decentralized corporate militias to destroy our attempt. However, we won't allow this to happen. In order to boost the growth of our economy and our military we will need to reform the roads."
+ TEX_develop_our_infrastructure: "Develop our Infrastructure"
+ TEX_bail_out_the_corpos: "Bailout the Corporations"
+ TEX_expand_worker_rights: "Expand Worker Rights"
+ TEX_expand_worker_rights_desc: "The tyranical maniac John D. Rockefeller opressed the workers and regular folk of America for far too long. We will allow the workers more rights at their workplaces and in decision-making so that we can finally free them from the chains, which will also help to prevent them from falling to ideologies like marxism and anarchism."
+ TEX_token_worker_rights: "Token Worker Rights"
+ TEX_token_worker_rights_desc: "We must make the workers of America see that we want the best of them without actually giving them so much rights that they would destroy the economy with their own intentions and desires of so called liberation. Therefore, we will make a small show of humanity by increasing their abilities at the worker place but in a very limited amount. The goal of this is to prevent their fall to ideologies like marxism."
+ TEX_fixing_the_economy: "Restrengthening Our Economy"
+ TEX_fixing_the_economy_desc: "Rockefeller's administration has severely weakened our economy. We are still way better off than some of the other warlords, but we need to rebuild and regain our strength if we hope to survive."
+ TEX_cooperate_with_loyal_corporations: "Control The Corporations"
+ TEX_cooperate_with_loyal_corporations_desc: "Not every company is a branch of Ford Motors! We will search for valuable corporations willing enough to cooperate with our government and seek to invest as best as we can into them, so that our blast furnaces can fire off again!"
+ TEX_emergency_industrialization: "Emergency Industrialisation"
+ TEX_emergency_industrialization_desc: "We will implement a number of laws making economic reform easier as well as to open a number of new state-owned factories. For the people to find jobs we need to put more effort into creating spaces where they can get those jobs. However, we also need to take away a few liberties to speed these reforms up, but fret not, this will be temporary..."
+ TEX_hike_the_population_tax: "Hike the Population Tax"
+ TEX_hike_the_population_tax_desc: "A painful action, but it must be done. If we wish to keep funding our economic goals we need to gain a greater budget, and to do that is to allocate such a burden to our people, as is increasing the tax. Alas, we will come out great again!"
+ TEX_increase_working_hours: "Mandatory Labor"
+ TEX_increase_working_hours_desc: ""
+ TEX_import_mexican_labor: "Import Mexican Labor"
+ TEX_import_mexican_labor_desc: "Mi Casa es tu Casa! We need to invite Mexican workers in order to boost our fragile industry that is lacking a proper workforce after the events following the assasination. We will give them visas and allow them to work here. We will promise them good food since thats what Mexicans like, but we wont give it to them. They are a cheap workforce, screws in our machine. And we will use them for America's return."
+ TEX_expand_our_research_capabilities: "Expand our Research Capabilites"
+ TEX_expand_our_research_capabilities_desc: "We need to expand our laboratories and invest in companies that make new products both for our military and for the civilian population. We are lacking technologically compared to the other warlords due to our geographical location. In order to fight against this, we need to heavily invest into expanding our education system, our labs and we need to support the engineers of America at being the best versions of themselves."
+ TEX_complete_control: "Complete Control"
+ TEX_develop_consumer_industry: "Develop Consumer Industry"
+ 
+ #starting poltic tree
+ TEX_temp_trade_with_ford: "Dubious Trade Deal"
+
+ # Fortification #
+ TEX_hold_borders: "Hold Our Borders"
+ TEX_keep_klansmen_out: "And Stay Out!"
+ TEX_fortify_red_river: "Hold The Red River Vally"
+ TEX_fortify_ccc: "Our Insurance Policy"
+ TEX_fortify_rio_grande: "Just In Case"
+ TEX_fortify_water: "Secure Our Coast"
+ TEX_practically_a_fortress: "Practically a Fortress"
+
+
+ # Auth Dem #
+ TEX_auth_dem_agenda: "New Democrats In Power"
+ TEX_slander_the_socialists: "Bastardize Socialism" 
+ TEX_point_out_lib_flaws: "Slander The Liberals"
+ TEX_appease_the_christians: "Appease The Christians"
+ TEX_create_sp: "Create FSCP" #Federal Secret Civil Police
+
+ # Libs #
+ TEX_lib_agenda: "Populists In Power"
+
+ # Sco Dem #
+ TEX_scodem_agenda: "Socialists In Power"
+ TEX_seek_lib_coop: "Teamwork Makes The Dream Work"
+ TEX_root_out_weak_left: "Only True Believers"
+
+ # Reacts #
+ TEX_reactionary_agenda: "Baptists In Power"
+ TEX_release_coop_goverment_ppl: "Release Cooperative Officials"
+
+
+ ### Events ###
+
+
+ tex.2: ""
+ tex.2.d: ""
+ tex.2.a: "That can't be good..."
+ tex.2.b: "They wont get away with this."
+ tex.2.c: "This could be beneficial."
+ tex.3.t: "Rise In Klan Activity"
+ tex.3.a: "Fuck."
+ tex.6.t: "What To Do With The Captured Klansmen?"
+ tex.6.d: "With the surprising number of Klansmen now in custody and their leaders in Texas captured, many of their crimes have now been brought to light. Many assumed the stories were just exaggerated rumors, but they might not be that far from the truth. With an upcoming invasion planned to free the South from their tyranny, many fear what they will see, and many more question what to do with these monsters."
+ tex.6.a: "Prosecute them accordingly."
+ tex.6.b: "They are all traitors. Imprison them all."
+ tex.6.c: "THEY CAN ALL BURN IN HELL!"
+ tex.8.t: "Our First Independent Election"
+ tex.8.a: "The Socialists Win!"
+ tex.8.b: "The Populists Win!"
+ tex.9.t: "Riot At The Capital!"
+ tex.9.a: "Flee like a bitch..."
+ tex.9.b: "Stand and fight!"
+ tex.10.t: "Norris Is Dead"
+ tex.10.a: "Fuck."
+ tex.11.t: "Neff Found Dead!"
+ tex.11.d: "(he killed himself L ratio bozo)"
+ tex.11.a: "Coward..."
+ 
+ texbap.1.t: "The Many Faces of the Devil"
+ texbap.1.d: ""The world today is a corrupt, unjust place where the legions of hell fight amongst themselves, dragging the good people of this world down with them. These many children of Satan have many faces, from the unassuming to the radical. From the socialists who promise a utopia if you give up your homes and swear off your God, to the cultists who promise you everything if you worship theirs. The only way to save our world is to stand together, and as the children, the hands of God, break our shackles and rid it of the Devil." -John Frank Norris, political representative of the Texas Baptist Church."
+ texbap.1.a: "..."
+
+ ### Ideas ###
+
+ # Starting #
+ TEX_kkk_activity: "Klan Activity"
+ TEX_economic_shock: "Economic Shock"
+ TEX_under_qualified_army: "Under Qualified Army"
+ TEX_progressive_authoritarianism: "Progressive Authoritarianism"
+ TEX_baptist_dominance: "Baptist Dominance"
+ TEX_macarthurs_blessing: "Macarthur's Blessing"
+ TEX_bankrupt_oil_economy: "Bankrupt Oil Economy"
+ 
+ ## Other ##
+ TEX_smoldering_economy: "Smoldering Economy"
+ TEX_fortress: "Practically a Fortress"
+ TEX_increased_kkk_activity: "Increased Klan Activity"
+ TEX_dead_norris: "Martyred"
+ TEX_southern_legacy: "Southern Legacy"
+ TEX_southern_pride_idea: "Southern Pride"
+ TEX_mandatory_labor: "Mandatory Labor "
+
+ ### TOOL TIPS ###
+
+ compatible_ideology: "§Y[THIS.GetName]§! has a compatible ideology"
+ this_focus_does: "§YThis focus does:§!"
+ 
+ ### FACTIONS ###
+
+ TEXSCO_FACTION: "Southern Socialists Front"
+ TEXDEM_FACTION: "Democratic Association of Free States"

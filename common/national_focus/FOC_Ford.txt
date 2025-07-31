@@ -1,0 +1,112 @@
+focus_tree = {
+	id = FOC_Ford
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FOC
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 2000 }
+
+	focus = {
+		id = FOC_starting_anew
+		icon = GFX_focus_USA_american_dream
+		x = 0
+		y = 0
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Fate_of_The_Mercenariers
+		icon = GFX_focus_USA_american_dream
+		x = 0
+		y = 1
+		prerequisite = {focus = FOC_starting_anew }
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Raise_a_Militia
+		icon = GFX_focus_USA_american_dream
+		x = -2
+		y = 2
+		prerequisite = {focus = FOC_Fate_of_The_Mercenariers }
+		cost = 5
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = FOC_Corporate_Nationalism
+		icon = GFX_focus_USA_american_dream
+		x = -2
+		y = 3
+		prerequisite = {focus = FOC_Raise_a_Militia}
+		cost = 5
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = FOC_Bolster_Company_Budget
+		icon = GFX_focus_USA_american_dream
+		x = 2
+		y = 2
+		prerequisite = {focus = FOC_Fate_of_The_Mercenariers }
+		cost = 5
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = FOC_Token_rights
+		icon = GFX_focus_USA_american_dream
+		x = 2
+		y = 3
+		prerequisite = {focus = FOC_Bolster_Company_Budget}
+		cost = 5
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = FOC_Fortify_Saint_Louis
+		icon = GFX_focus_USA_american_dream
+		x = 0
+		y = 4
+		prerequisite = {focus = FOC_Token_rights}
+		prerequisite = {focus = FOC_Corporate_Nationalism}
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_One_Final_Blow
+		icon = GFX_focus_USA_american_dream
+		x = 0
+		y = 5
+		prerequisite = {focus = FOC_Fortify_Saint_Louis }
+		cost = 5
+		completion_reward = {
+	    declare_war_on = {
+		target = ASF
+		type = annex_everything
+		}
+		}
+	}
+	focus = {
+		id = FOC_Establish_the_Chicago_Branch
+		icon = GFX_focus_USA_american_dream
+		x = 0
+		y = 6
+		available = {
+		NOT = {
+		country_exists = ASF
+		}
+		}
+		prerequisite = {focus = FOC_One_Final_Blow }
+		cost = 5
+		completion_reward = {
+		}
+	}
+}

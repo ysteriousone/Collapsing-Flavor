@@ -1,0 +1,30 @@
+add_namespace = jap
+
+country_event = {
+	id = jap.1
+	title = jap.1.t
+	desc = jap.1.d
+	picture = GFX_news_event_USA_JDR_dead
+	major = yes
+	is_triggered_only = yes
+log = "[GetDateText]: [Root.GetName]: event jap.1"
+	
+	option = {
+		name = jap.1.a
+	FIJ = {
+	transfer_state = 642
+	transfer_state = 727
+	}
+	JAP = {
+	transfer_state = 638
+	transfer_state = 632
+	transfer_state = 630
+	transfer_state = 631
+	transfer_state = 629
+	transfer_state = 650
+	declare_war_on = {
+	target = PHI
+	type = {
+    annex_everything
+	}
+}

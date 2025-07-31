@@ -1,0 +1,1947 @@
+focus_tree = {
+	id = USA_macarthur
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CCC
+		}
+	}
+	default = no
+	initial_show_position = { focus = USA_mc_to_save_a_nation }
+	continuous_focus_position = { x = 0 y = 2000 }
+
+	focus = {
+		id = USA_mc_to_save_a_nation
+		icon = GFX_focus_USA_american_dream
+		x = 15
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus	USA_mc_to_save_a_nation"
+			country_event = ccc.1	
+		}
+	}
+	focus = {
+		id = USA_mc_convice_the_military
+		icon = GFX_focus_WRD_first_ask_for_an_exchange_of_pows
+
+		relative_position_id = USA_mc_to_save_a_nation
+		y = 1
+		x = -1
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_convice_the_military"
+			add_war_support = 0.05
+			army_experience = 40
+		}
+		prerequisite =	{ focus = USA_mc_to_save_a_nation }
+	}
+	focus = {
+		id = USA_mc_secure_the_towns
+		icon = GFX_focus_ENG_arrest_dissidents
+
+		relative_position_id = USA_mc_convice_the_military
+		y = 1
+
+		cost = 4
+		
+		prerequisite =	{ focus = USA_mc_convice_the_military }
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_convice_the_military"
+			add_command_power = 30
+			swap_ideas = {
+				remove_idea = CCC_extreme_instability
+				add_idea = CCC_high_instability
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_rally_the_people
+		icon = GFX_focus_USA_mc_american_people
+
+		relative_position_id = USA_mc_to_save_a_nation
+		y = 1
+		x = 1
+
+		cost = 4
+		
+		prerequisite =	{ focus = USA_mc_to_save_a_nation }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_convice_the_military"
+			country_event = ccc.4
+			
+		}
+	}
+	focus = {
+		id = USA_mc_promise_democracy
+		icon = GFX_focus_USA_mc_promise_democracy
+
+		relative_position_id = USA_mc_rally_the_people
+		y = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_rally_the_people }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_convice_the_military"
+			    add_popularity = {
+				     ideology = liberalism
+				     popularity = 0.05
+			    }
+				add_popularity = {
+				     ideology = conservatism
+				     popularity = 0.05
+			    }
+				add_stability = 0.1
+		}
+		
+	}
+	focus = {
+		id = USA_mc_declare_macarthur_president
+		icon = GFX_focus_USA_mc_declare_macarthur_president
+
+		relative_position_id = USA_mc_to_save_a_nation
+		y = 3
+
+		cost = 7
+
+		prerequisite =	{ focus = USA_mc_promise_democracy }
+		prerequisite =	{ focus = USA_mc_secure_the_towns }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus	USA_mc_to_save_a_nation"
+			
+			news_event = ccc.2
+		}
+		
+	}
+
+	#Economy branch
+	focus = {
+		id = USA_mc_fixing_the_economy
+		icon = GFX_focus_USA_mc_fix_economy
+
+		relative_position_id = USA_mc_declare_macarthur_president
+		y = 1
+		x = -15
+		cost = 5
+		prerequisite =	{ focus = USA_mc_declare_macarthur_president }
+		completion_reward = {
+		     swap_ideas = {
+				remove_idea = CCC_corporate_nightmare
+				add_idea = CCC_corporate_nightmare2
+			}
+		}
+	}
+	##Corporatocracy
+	focus = {
+		id = USA_mc_cooperate_with_loyal_corporations
+		icon = GFX_focus_USA_mc_loyal_corporations
+
+		relative_position_id = USA_mc_fixing_the_economy
+		y = 1
+		x = -2
+		cost = 5
+		prerequisite =	{ focus = USA_mc_fixing_the_economy }
+		mutually_exclusive = { focus = USA_mc_destroy_the_corporatocracy }
+		
+		completion_reward = {
+		     swap_ideas = {
+				remove_idea = CCC_corporate_nightmare2
+				add_idea = CCC_corporate_nightmare6
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_emergency_industrialization
+		icon = GFX_focus_USA_mc_emergency
+
+		relative_position_id = USA_mc_cooperate_with_loyal_corporations
+		y = 1
+		x = -1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_cooperate_with_loyal_corporations }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = CCC_corporate_nightmare6
+				add_idea = CCC_corporate_nightmare7
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_restart_trade
+		icon = GFX_focus_USA_mc_open_trade
+		relative_position_id = USA_mc_cooperate_with_loyal_corporations
+		y = 1
+		x = 1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_cooperate_with_loyal_corporations }
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus	USA_mc_to_save_a_nation"
+			add_ideas = {
+				free_trade
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = USA_mc_hike_the_population_tax
+		icon = GFX_focus_USA_mc_increase_taxes
+		relative_position_id = USA_mc_emergency_industrialization
+		y = 1
+		x = -1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_emergency_industrialization }
+		
+		completion_reward = {
+		     swap_ideas = {
+				remove_idea = CCC_corporate_nightmare7
+				add_idea = CCC_corporate_nightmare8
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_increase_working_hours
+		icon = GFX_focus_USA_mc_working_hours
+		relative_position_id = USA_mc_emergency_industrialization
+		y = 1
+		x = 1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_emergency_industrialization }
+		completion_reward = {
+		add_ideas = {
+                 CCC_increased_working_hours
+			    }
+				}
+	}
+	focus = {
+		id = USA_mc_import_mexican_labor
+		icon = GFX_focus_USA_mc_mexicans
+
+		relative_position_id = USA_mc_emergency_industrialization
+		y = 2
+		cost = 5
+		prerequisite =	{ focus = USA_mc_hike_the_population_tax }
+		prerequisite =	{ focus = USA_mc_increase_working_hours }
+		
+		completion_reward = {
+		     swap_ideas = {
+				remove_idea = CCC_corporate_nightmare8
+				add_idea = CCC_corporate_nightmare9
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_token_worker_rights
+		icon = GFX_focus_USA_mc_fake_worker
+
+		relative_position_id = USA_mc_import_mexican_labor
+		y = 1
+		x = 1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_import_mexican_labor }
+		
+		completion_reward = {
+		    add_ideas = {
+                      CCC_token_workers_rights
+			    }
+			}
+	}
+	focus = {
+		id = USA_mc_fight_our_debt
+		icon = GFX_focus_USA_mc_pay_debts
+
+		relative_position_id = USA_mc_token_worker_rights
+		y = 1
+		x = 1
+		cost = 5
+		prerequisite =	{
+			focus = USA_mc_token_worker_rights
+			focus = USA_mc_fight_poverty
+		}
+		prerequisite = { focus = USA_mc_agricultural_revitalization_program }
+		mutually_exclusive = { focus = USA_mc_deficit_spending }
+		
+		completion_reward = {
+		    add_timed_idea = { 
+				idea = CCC_fighting_our_debts
+				days = 120
+			}
+			}
+	}
+
+	##Not corporatocracy
+	focus = {
+		id = USA_mc_destroy_the_corporatocracy
+		icon = GFX_focus_USA_mc_stop_corp
+
+		relative_position_id = USA_mc_fixing_the_economy
+		y = 1
+		x = 2
+		cost = 5
+		prerequisite =	{ focus = USA_mc_fixing_the_economy }
+		mutually_exclusive = { focus = USA_mc_cooperate_with_loyal_corporations }
+		
+		completion_reward = {
+		     swap_ideas = {
+				remove_idea = CCC_corporate_nightmare2
+				add_idea = CCC_corporate_nightmare3
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_principles_of_autarky
+		icon = GFX_focus_USA_mc_principles
+
+		relative_position_id = USA_mc_destroy_the_corporatocracy
+		y = 1
+		x = -1
+
+		cost = 5
+
+		prerequisite =	{ focus = USA_mc_destroy_the_corporatocracy }
+		
+		completion_reward = {
+		    377 = {
+				add_resource = {
+					type = steel
+					amount = 22
+				}
+			}
+			376 = {
+				add_resource = {
+					type = aluminium
+					amount = 6
+				}
+			}
+		    add_political_power = -25
+		}
+	}
+	focus = {
+		id = USA_mc_intervene_in_the_economy
+		icon = GFX_focus_USA_mc_intervene
+
+		relative_position_id = USA_mc_destroy_the_corporatocracy
+		y = 1
+		x = 1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_destroy_the_corporatocracy }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = CCC_corporate_nightmare3
+				add_idea = CCC_corporate_nightmare4
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_develop_our_infrastructure
+		icon = GFX_focus_USA_mc_roads
+
+		relative_position_id = USA_mc_intervene_in_the_economy
+		y = 1
+		x = 1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_intervene_in_the_economy }
+		
+		completion_reward = {
+			every_core_state = {
+				tooltip = every_owned_core_with_less_than_3_infrastructure_tt
+				limit = {
+					is_owned_by = CCC
+					infrastructure < 3
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+	}
+	focus = {
+		id = USA_mc_raise_corporate_taxes
+		icon = GFX_focus_USA_mc_tax_rich
+
+		relative_position_id = USA_mc_intervene_in_the_economy
+		y = 1
+		x = -1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_intervene_in_the_economy }
+		
+		completion_reward = {
+		     swap_ideas = {
+				remove_idea = CCC_corporate_nightmare4
+				add_idea = CCC_corporate_nightmare5
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_expand_worker_rights
+		icon = GFX_focus_USA_mc_real_worker
+
+		relative_position_id = USA_mc_intervene_in_the_economy
+		y = 2
+		cost = 5
+		prerequisite =	{ focus = USA_mc_develop_our_infrastructure }
+		prerequisite =	{ focus = USA_mc_raise_corporate_taxes }
+		completion_reward = {
+		
+		    add_ideas = {
+                      CCC_expanded_workers_rights
+			    }
+			}
+	}
+	focus = {
+		id = USA_mc_fight_poverty
+		icon = GFX_focus_USA_mc_poverty
+
+		relative_position_id = USA_mc_expand_worker_rights
+		y = 1
+		x = -1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_expand_worker_rights }
+		
+		completion_reward = {
+		    remove_ideas = {
+				CCC_corporate_nightmare5
+			}
+	}
+	}
+	focus = {
+		id = USA_mc_deficit_spending
+		icon = GFX_focus_USA_mc_deficit
+
+		relative_position_id = USA_mc_fight_poverty
+		y = 1
+		x = -1
+		cost = 5
+		prerequisite =	{
+			focus = USA_mc_fight_poverty
+			focus = USA_mc_token_worker_rights
+		}
+		prerequisite = { focus = USA_mc_agricultural_revitalization_program }
+		mutually_exclusive = { focus = USA_mc_fight_our_debt }
+		
+		completion_reward = {
+		    add_timed_idea = { 
+				idea = CCC_deficit_spending
+				days = 120
+			}
+			}
+		
+	}
+	##Common
+	focus = {
+		id = USA_mc_expand_the_military_industry
+		icon = GFX_focus_USA_mc_military_industry
+
+		relative_position_id = USA_mc_fixing_the_economy
+		y = 3
+		cost = 5
+		prerequisite =	{ focus = USA_mc_restart_trade focus = USA_mc_principles_of_autarky }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_be_resourceful
+		icon = GFX_focus_USA_mc_resourceful
+
+		relative_position_id = USA_mc_expand_the_military_industry
+		y = 1
+		x = -1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_expand_the_military_industry }
+		mutually_exclusive = { focus = USA_mc_develop_our_resources }
+		
+		completion_reward = {
+		    add_ideas = {
+                      CCC_resourcefulnes
+			    }
+			}
+	}
+	focus = {
+		id = USA_mc_develop_our_resources
+		icon = GFX_focus_USA_mc_excavation
+
+		relative_position_id = USA_mc_expand_the_military_industry
+		y = 1
+		x = 1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_expand_the_military_industry }
+		mutually_exclusive = { focus = USA_mc_be_resourceful }
+		
+		completion_reward = {
+		    add_ideas = {
+                      CCC_improved_excavation
+			    }
+			}
+	}
+	focus = {
+		id = USA_mc_agricultural_revitalization_program
+		icon = GFX_focus_USA_mc_agri
+
+		relative_position_id = USA_mc_expand_the_military_industry
+		y = 2
+		cost = 5
+		prerequisite =	{
+			focus = USA_mc_be_resourceful
+			focus = USA_mc_develop_our_resources
+		}
+		
+		completion_reward = {
+		    add_ideas = {
+                      CCC_revitalized_agriculture
+			    }
+			}
+	}
+	focus = {
+		id = USA_mc_expand_our_research_capabilities
+		icon = GFX_focus_USA_mc_research
+
+		relative_position_id = USA_mc_agricultural_revitalization_program
+		y = 2
+		cost = 5
+		prerequisite =	{
+			focus = USA_mc_fight_our_debt
+			focus = USA_mc_deficit_spending
+		}
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_expand_our_research_capabilities"
+			add_research_slot = 1
+			add_political_power = 25
+		}
+	}
+
+	#Military branch
+	focus = {
+		id = USA_mc_fighting_for_democracy
+		icon = GFX_focus_USA_mc_kazya_skibidi
+
+		relative_position_id = USA_mc_declare_macarthur_president
+		y = 1
+		cost = 5
+		prerequisite =	{ focus = USA_mc_declare_macarthur_president }
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_convice_the_military"
+			add_political_power = 20
+			swap_ideas = {
+				remove_idea = CCC_the_liberation_army
+				add_idea = CCC_the_liberation_army2
+			}
+		}
+	}
+
+	##Air subbranch
+	focus = {
+		id = USA_mc_wings_of_freedom
+		icon = GFX_focus_USA_mc_wings_of_freedom
+
+		relative_position_id = USA_mc_fighting_for_democracy
+		y = 1
+		x = -8
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_fighting_for_democracy }
+		
+		completion_reward = {
+			air_experience = 25
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				}
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = 25
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 25
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_tactical_bombardment
+		icon = GFX_focus_USA_mc_tactical
+
+		relative_position_id = USA_mc_wings_of_freedom
+		y = 1
+		x = -1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_wings_of_freedom }
+		mutually_exclusive = { focus = USA_mc_fight_for_air_superiority }
+		completion_reward = {
+		     air_experience = 25
+		     if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_equipment_to_stockpile = {
+					type = medium_plane_airframe_0
+					amount = 100
+					producer = USA
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 100
+					producer = USA
+				}
+			}
+			add_tech_bonus = {
+				name = FGB_aerial_innovations
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_research_new_bombers
+		icon = GFX_focus_USA_mc_plane
+
+		relative_position_id = USA_mc_tactical_bombardment
+		y = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_tactical_bombardment }
+		
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = FGB_aerial_innovations
+				bonus = 1.0
+				uses = 2
+				category = tactical_bomber
+			}
+			add_doctrine_cost_reduction = {
+				name = FRA_air_ground_cooperation
+				category = air_doctrine
+				uses = 1
+				cost_reduction = 0.5
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_bombs_of_freedom
+		icon = GFX_focus_USA_mc_bombs_of_freedom
+
+		relative_position_id = USA_mc_research_new_bombers
+		y = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_research_new_bombers }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus UVS_thalmannomics_log"
+			add_ideas = {
+				CCC_bombs_of_freedom
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_fight_for_air_superiority
+		icon = GFX_focus_USA_mc_earth
+
+		relative_position_id = USA_mc_wings_of_freedom
+		y = 1
+		x = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_wings_of_freedom }
+		mutually_exclusive = { focus = USA_mc_tactical_bombardment }
+		
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = 100
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 100
+				}
+			}
+			add_tech_bonus = {
+				name = FGB_aerial_innovations
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+	}
+	}
+	focus = {
+		id = USA_mc_cas_research
+		icon = GFX_focus_USA_mc_invest
+
+		relative_position_id = USA_mc_fight_for_air_superiority
+		y = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_fight_for_air_superiority }
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = FGB_aerial_innovations
+				bonus = 1.0
+				uses = 2
+				category = cas_bomber
+			}
+			add_doctrine_cost_reduction = {
+				name = FRA_air_ground_cooperation
+				category = air_doctrine
+				uses = 1
+				cost_reduction = 0.5
+			}
+	}
+	}
+	focus = {
+		id = USA_mc_simplify_plane_production
+		icon = GFX_focus_USA_mc_simple
+
+		relative_position_id = USA_mc_cas_research
+		y = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_cas_research }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus UVS_thalmannomics_log"
+			add_ideas = {
+				CCC_simplified_plane_production
+			}
+		}
+	}
+
+	##Army subbranches
+	focus = {
+		id = USA_mc_professionalize_the_army
+		icon = GFX_focus_USA_mc_prof
+
+		relative_position_id = USA_mc_fighting_for_democracy
+		y = 2
+
+		cost = 7
+		
+		prerequisite =	{ 
+			focus = USA_mc_decentralized_army_structure
+			focus = USA_mc_centralize_the_army_command
+		}
+		
+		completion_reward = {
+			if = { 
+					limit = { has_idea = CCC_the_liberation_army_cen }
+					swap_ideas = { 
+					remove_idea = CCC_the_liberation_army_cen
+					add_idea = CCC_the_liberation_army_cen2
+				}
+			}
+			else_if = { 
+					limit = { has_idea = CCC_the_liberation_army_decen }
+					swap_ideas = { 
+					remove_idea = CCC_the_liberation_army_decen
+					add_idea = CCC_the_liberation_army_decen2
+				}
+			}
+			else = {
+				custom_effect_tooltip = CCC_effects_tt
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_loyalty_to_democracy
+		icon = GFX_focus_USA_mc_freedom_fight
+
+		relative_position_id = USA_mc_professionalize_the_army
+		y = 1
+		x = -1
+
+		cost = 6
+		
+		prerequisite =	{ focus = USA_mc_professionalize_the_army }
+		mutually_exclusive = { focus = USA_mc_loyalty_to_the_marshal }
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_convice_the_military"
+			swap_ideas = {
+				remove_idea = CCC_the_marshals_regime
+				add_idea = CCC_the_marshals_regime4
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_loyalty_to_the_marshal
+		icon = GFX_focus_USA_mc_dictator
+
+		relative_position_id = USA_mc_professionalize_the_army
+		y = 1
+		x = 1
+
+		cost = 6
+		
+		prerequisite =	{ focus = USA_mc_professionalize_the_army }
+		mutually_exclusive = { focus = USA_mc_loyalty_to_democracy }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_convice_the_military"
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = CCC_the_marshals_regime
+				add_idea = CCC_the_marshals_regime2
+			}
+		}
+		
+	}
+	focus = {
+		id = USA_mc_train_the_next_generation
+		icon = GFX_focus_USA_mc_generation
+
+		relative_position_id = USA_mc_professionalize_the_army
+		y = 2
+
+		cost = 5
+		
+		prerequisite =	{
+			focus = USA_mc_loyalty_to_democracy
+			focus = USA_mc_loyalty_to_the_marshal
+		}
+		completion_reward = {
+		     add_manpower = 5000
+			 add_war_support = 0.05
+			 army_experience = 25
+	}
+			 
+	}
+	focus = {
+		id = USA_mc_prisoners_no_more
+		icon = GFX_focus_USA_mc_prisoners
+
+		relative_position_id = USA_mc_train_the_next_generation
+		y = 1
+		x = -1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_train_the_next_generation }
+		prerequisite = { focus = USA_mc_loyalty_to_democracy }
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_convice_the_military"
+			add_political_power = -50
+			swap_ideas = {
+				remove_idea = CCC_the_marshals_regime4
+				add_idea = CCC_the_marshals_regime5
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_purge_unloyal_officers
+		icon = GFX_focus_USA_mc_purge
+
+		relative_position_id = USA_mc_train_the_next_generation
+		y = 1
+		x = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_train_the_next_generation }
+		prerequisite =	{ focus = USA_mc_loyalty_to_the_marshal }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_convice_the_military"
+			add_stability = -0.05
+			swap_ideas = {
+				remove_idea = CCC_the_marshals_regime2
+				add_idea = CCC_the_marshals_regime3
+			}
+		}
+	}
+
+	##Centralized army
+	focus = {
+		id = USA_mc_centralize_the_army_command
+		icon = GFX_focus_USA_mc_cen
+
+		relative_position_id = USA_mc_fighting_for_democracy
+		y = 1
+		x = 3
+
+		cost = 5
+		
+		mutually_exclusive = { focus = USA_mc_decentralized_army_structure }
+		prerequisite =	{ focus = USA_mc_fighting_for_democracy }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CCC_the_liberation_army2
+				add_idea = CCC_the_liberation_army_cen
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_patience_is_key
+		icon = GFX_focus_USA_mc_patience
+
+		relative_position_id = USA_mc_centralize_the_army_command
+		y = 1
+		#x = -1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_centralize_the_army_command }
+		mutually_exclusive = { focus = USA_mc_mobile_warfare_tactics }
+		
+		completion_reward = {
+			add_ideas = {
+				CCC_army_doctrineC
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_support_companies
+		icon = GFX_focus_USA_mc_support
+
+		relative_position_id = USA_mc_patience_is_key
+		y = 2
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_patience_is_key }
+		prerequisite = { focus = USA_mc_queen_of_the_battlefield }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = CCC_army_doctrineC2
+				remove_idea = CCC_army_doctrineC
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_mobile_warfare_tactics
+		icon = GFX_focus_USA_mc_mobile
+
+		relative_position_id = USA_mc_centralize_the_army_command
+		y = 1
+		x = 2
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_centralize_the_army_command }
+		mutually_exclusive = { focus = USA_mc_patience_is_key }
+		
+		completion_reward = {
+			add_ideas = {
+				CCC_army_doctrineD
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_research_new_tanks
+		icon = GFX_focus_USA_mc_tank
+
+		relative_position_id = USA_mc_mobile_warfare_tactics
+		y = 2
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_mobile_warfare_tactics }
+		prerequisite = { focus = USA_mc_queen_of_the_battlefield }
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = CCC_army_doctrineD2
+				remove_idea = CCC_army_doctrineD
+			}
+		    add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.25
+				uses = 3
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_queen_of_the_battlefield
+		icon = GFX_focus_USA_mc_queen
+
+		relative_position_id = USA_mc_centralize_the_army_command
+		y = 2
+		x = 1
+
+		cost = 5
+		
+		prerequisite =	{ 
+			focus = USA_mc_patience_is_key
+			focus = USA_mc_mobile_warfare_tactics
+		}
+		
+			completion_reward = {
+		        add_ideas = {
+				CCC_the_infantry_branch
+			}
+	}
+	}
+	focus = {
+		id = USA_mc_foreign_expertise
+		icon = GFX_focus_USA_mc_foreign
+
+		relative_position_id = USA_mc_queen_of_the_battlefield
+		y = 2
+
+		cost = 5
+		
+		prerequisite =	{ 
+			focus = USA_mc_support_companies
+			focus = USA_mc_research_new_tanks
+		}
+		
+		completion_reward = {
+			add_ideas = { CCC_entente_advisors }
+		}
+	}
+	##Decentralized army
+	focus = {
+		id = USA_mc_decentralized_army_structure
+		icon = GFX_focus_USA_mc_decen
+
+		relative_position_id = USA_mc_fighting_for_democracy
+		y = 1
+		x = -3
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_fighting_for_democracy }
+		mutually_exclusive = { focus = USA_mc_centralize_the_army_command }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CCC_the_liberation_army2
+				add_idea = CCC_the_liberation_army_decen
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_blow_the_traitors_to_dust
+		icon = GFX_focus_USA_mc_blow
+
+		relative_position_id = USA_mc_decentralized_army_structure
+		y = 1
+
+		cost = 5
+		
+		mutually_exclusive = { focus = USA_mc_mass_mobolization }
+		prerequisite =	{ focus = USA_mc_decentralized_army_structure }
+		
+		completion_reward = {
+			add_ideas = {
+				CCC_army_doctrineA
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_mass_mobolization
+		icon = GFX_focus_USA_mc_mass
+
+		relative_position_id = USA_mc_decentralized_army_structure
+		y = 1
+		x = -2
+
+		cost = 5
+		
+		mutually_exclusive = { focus = USA_mc_blow_the_traitors_to_dust }
+		prerequisite =	{ focus = USA_mc_decentralized_army_structure }
+		
+		completion_reward = {
+			add_ideas = {
+				CCC_army_doctrineB
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_guns_for_true_patriots
+		icon = GFX_focus_USA_mc_guns
+
+		relative_position_id = USA_mc_decentralized_army_structure
+		y = 2
+		x = -1
+		cost = 5
+		
+		prerequisite =	{ 
+			focus = USA_mc_mass_mobolization
+			focus = USA_mc_blow_the_traitors_to_dust 
+		}
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus UVS_negotiations_with_the_rsfsr_log"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 3500
+				producer = USA
+			}
+			add_war_support = 0.05
+			
+		}
+	}
+	focus = {
+		id = USA_mc_the_army_is_people
+		icon = GFX_focus_USA_mc_army_people
+
+		relative_position_id = USA_mc_mass_mobolization
+		y = 2
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_mass_mobolization }
+		prerequisite =	{ focus = USA_mc_guns_for_true_patriots }
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = CCC_army_doctrineB2
+				remove_idea = CCC_army_doctrineB
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_expand_artillery_production
+		icon = GFX_focus_USA_mc_arty
+
+		relative_position_id = USA_mc_blow_the_traitors_to_dust
+		y = 2
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_blow_the_traitors_to_dust }
+		prerequisite =	{ focus = USA_mc_guns_for_true_patriots }
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = CCC_army_doctrineA2
+				remove_idea = CCC_army_doctrineA
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_raise_militias
+		icon = GFX_focus_USA_mc_raise
+
+		relative_position_id = USA_mc_guns_for_true_patriots
+		y = 2
+
+		cost = 5
+		
+		prerequisite =	{ 
+			focus = USA_mc_the_army_is_people
+			focus = USA_mc_expand_artillery_production
+		}
+		
+		completion_reward = {
+			division_template = {
+				name = "Militia Brigade"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+
+					cavalry = { x = 2 y = 0 }
+					cavalry = { x = 2 y = 1 }
+					
+					artillery_brigade = { x = 3 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				}
+			}
+			379 = {
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Militia Brigade\" start_experience_factor = 0"
+					owner = PREV
+					count = 2
+				}
+			}
+			380 = {
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Militia Brigade\" start_experience_factor = 0"
+					owner = PREV
+					count = 3
+				}
+			}
+			382 = {
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Militia Brigade\" start_experience_factor = 0"
+					owner = PREV
+					count = 2
+				}
+			}
+			376 = {
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Militia Brigade\" start_experience_factor = 0"
+					owner = PREV
+					count = 3
+				}
+			}
+		}
+	}
+
+
+	##Political subbranch
+	focus = {
+		id = USA_mc_republican_democrat_unity
+		icon = GFX_focus_USA_mc_unity
+
+		relative_position_id = USA_mc_fighting_for_democracy
+		y = 1
+		x = 8
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_fighting_for_democracy }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_convice_the_military"
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = USA_mc_ban_the_socialists
+		icon = GFX_focus_USA_mc_soccies
+
+		relative_position_id = USA_mc_republican_democrat_unity
+		y = 1
+		x = -1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_republican_democrat_unity }
+		mutually_exclusive = { focus = USA_mc_outlaw_the_nationalists }
+		
+		completion_reward = {
+		    add_popularity = {
+					ideology = marxism
+					popularity = -0.05
+				}
+			add_popularity = {
+					ideology = libertarian_socialism
+					popularity = -0.05
+				}
+			add_popularity = {
+					ideology = bolshevism
+					popularity = -0.05
+				}
+			add_political_power = 50
+	}
+	}
+	focus = {
+		id = USA_mc_outlaw_the_nationalists
+		icon = GFX_focus_USA_mc_hunt
+
+		relative_position_id = USA_mc_republican_democrat_unity
+		y = 1
+		x = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_republican_democrat_unity }
+		mutually_exclusive = { focus = USA_mc_ban_the_socialists }
+		
+		    completion_reward = {
+		    add_popularity = {
+					ideology = national_syndicalism
+					popularity = -0.1
+				}
+			add_stability = 0.05
+	}
+	}
+	focus = {
+		id = USA_mc_fight_radicalism
+		icon = GFX_focus_USA_mc_radical
+
+		relative_position_id = USA_mc_republican_democrat_unity
+		y = 2
+
+		cost = 5
+		
+		prerequisite =	{
+			focus = USA_mc_ban_the_socialists
+			focus = USA_mc_outlaw_the_nationalists
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CCC_high_instability
+				add_idea = CCC_moderate_instability
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_restore_freedom_of_speech
+		icon = GFX_focus_USA_mc_speech
+
+		relative_position_id = USA_mc_fight_radicalism
+		y = 1
+		x = -1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_fight_radicalism }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus UVS_worker_soviets"
+			add_ideas = {
+				free_press
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_reopen_democratic_institutions
+		icon = GFX_focus_USA_mc_reopen
+
+		relative_position_id = USA_mc_restore_freedom_of_speech
+		y = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_restore_freedom_of_speech }
+		
+	    completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus UVS_worker_soviets"
+			add_ideas = {
+				CCC_local_autonomy
+			}
+		 }
+	}
+	focus = {
+		id = USA_mc_state_radio
+		icon = GFX_focus_USA_mc_radios
+
+		relative_position_id = USA_mc_fight_radicalism
+		y = 1
+		x = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_fight_radicalism }
+		
+		completion_reward = {
+				add_ideas = CCC_federal_radio_station
+			    } 
+				
+		}
+	focus = {
+		id = USA_mc_token_civil_rights
+		icon = GFX_focus_USA_mc_civil
+
+		relative_position_id = USA_mc_state_radio
+		y = 1
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_state_radio }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CCC_moderate_instability
+				add_idea = CCC_low_instability
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_paper_democracy
+		icon = GFX_focus_USA_mc_paper
+
+		relative_position_id = USA_mc_fight_radicalism
+		y = 3
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_reopen_democratic_institutions }
+		prerequisite =	{ focus = USA_mc_token_civil_rights }
+		
+			completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus UVS_deal_with_social_fascists"
+		
+			remove_ideas = {
+				CCC_low_instability
+			}
+			add_political_power = -25
+		}
+	}
+	focus = {
+		id = USA_mc_end_of_the_army_reforms
+		icon = GFX_focus_ENG_squash_the_uprising
+
+		relative_position_id = USA_mc_fighting_for_democracy
+		y = 6
+
+		cost = 5
+		
+		prerequisite =	{
+			focus = USA_mc_prisoners_no_more
+			focus = USA_mc_purge_unloyal_officers
+			focus = USA_mc_foreign_expertise
+			focus = USA_mc_raise_militias
+		}
+		
+		completion_reward = {
+		     add_manpower = 100000
+			 add_war_support = 0.1
+			 army_experience = 200
+			 }
+	}
+	
+	focus = {
+		id = USA_mc_the_weapons_of_americas_destiny
+		icon = GFX_focus_USA_mc_nuke
+
+		relative_position_id = USA_mc_end_of_the_army_reforms
+		y = 1
+
+		cost = 5
+		
+		prerequisite =	{
+			focus = USA_mc_end_of_the_army_reforms
+		}
+		
+		completion_reward = {
+		     add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 2
+				category = nuclear
+				category = rocketry
+			}
+			 }
+	}
+
+	#America reunification branch
+	focus = {
+		id = USA_mc_declare_a_great_crusade
+		icon = GFX_focus_USA_mc_great_crusade
+		
+		available = { 
+			date > 1924.7.1
+		}
+
+		relative_position_id = USA_mc_declare_macarthur_president
+		y = 1
+		x = 12
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_declare_macarthur_president }
+		
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_destroy_the_californian_traitors_log"
+		
+			add_war_support = 0.05
+			add_political_power = 50
+			 add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1000
+				producer = USA
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_destroy_the_californian_traitors
+		icon = GFX_focus_USA_mc_attack_california
+
+		relative_position_id = USA_mc_declare_a_great_crusade
+		y = 1
+		x = -2
+
+		cost = 5
+		
+		available = {
+			has_war = no
+		}
+		bypass = {
+			NOT = {
+				country_exists = CAL
+			}
+		}
+		
+		prerequisite =	{ focus = USA_mc_declare_a_great_crusade }
+		mutually_exclusive = { focus = USA_mc_offer_them_reunification }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_destroy_the_californian_traitors_log"
+		
+			declare_war_on = {
+				target = CAL
+				type = annex_everything
+			}
+		}
+		
+	}
+	focus = {
+		id = USA_mc_offer_them_reunification
+		icon = GFX_focus_USA_mc_offer_them_reunification
+
+		relative_position_id = USA_mc_declare_a_great_crusade
+		y = 1
+
+		cost = 6
+		
+		available = {
+			has_war = no
+		}
+		bypass = {
+			NOT = {
+				country_exists = CAL
+			}
+		}
+		
+		prerequisite =	{ focus = USA_mc_declare_a_great_crusade }
+		mutually_exclusive = { focus = USA_mc_destroy_the_californian_traitors }
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus USA_mc_destroy_the_californian_traitors_log"
+		
+			CAL = {	
+				country_event = ccc.3
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_civilize_the_mormons
+		icon = GFX_focus_USA_mc_mormons
+
+		relative_position_id = USA_mc_declare_a_great_crusade
+		y = 1
+		x = 2
+
+		cost = 5
+		
+		available = {
+			has_war = no
+			is_neighbor_of = IDA
+		}
+		bypass = {
+			NOT = {
+				country_exists = IDA
+			}
+		}
+		
+		prerequisite =	{ focus = USA_mc_declare_a_great_crusade }
+
+		completion_reward = {
+			declare_war_on = {
+				target = IDA
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_utilize_californian_oil
+		icon = GFX_focus_USA_mc_oil
+
+		relative_position_id = USA_mc_declare_a_great_crusade
+		y = 2
+
+		cost = 5
+		
+		prerequisite =	{
+			focus = USA_mc_offer_them_reunification
+			focus = USA_mc_destroy_the_californian_traitors
+		}
+		
+		prerequisite =	{
+			focus = USA_mc_civilize_the_mormons
+		}
+		
+		available = {
+			NOT = {
+				country_exists = CAL
+			}
+		}
+		
+		completion_reward = {
+			
+			add_political_power = 25
+			1024 = {
+				add_resource = {
+					type = oil
+					amount = 48
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_destroy_the_oregon_soviet
+		icon = GFX_focus_USA_mc_oregon
+
+		relative_position_id = USA_mc_utilize_californian_oil
+		y = 1
+		x = -1
+
+		cost = 5
+		
+		available = {
+			has_war = no
+			is_neighbor_of = ORG
+		}
+		bypass = {
+			NOT = {
+				country_exists = ORG
+			}
+		}
+		
+		prerequisite =	{ focus = USA_mc_utilize_californian_oil }
+
+		completion_reward = {
+			declare_war_on = {
+				target = ORG
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_retake_seattle
+		icon = GFX_focus_USA_mc_seattle
+
+		relative_position_id = USA_mc_utilize_californian_oil
+		y = 1
+		x = 1
+
+		cost = 5
+		
+		available = {
+			has_war = no
+			is_neighbor_of = WSH
+		}
+		bypass = {
+			NOT = {
+				country_exists = WSH
+			}
+		}
+		
+		prerequisite =	{ focus = USA_mc_utilize_californian_oil }
+
+		completion_reward = {
+			declare_war_on = {
+				target = WSH
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_the_west_is_ours
+		icon = GFX_focus_USA_mc_west
+
+		relative_position_id = USA_mc_utilize_californian_oil
+		y = 2
+
+		cost = 5
+		
+		prerequisite =	{ focus = USA_mc_destroy_the_oregon_soviet }
+		prerequisite =	{ focus = USA_mc_retake_seattle }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_timed_idea = { 
+				idea = WVA_the_east_is_ours 
+				months = 2
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_demand_texan_annexation
+		icon = GFX_focus_USA_mc_texas
+
+		relative_position_id = USA_mc_the_west_is_ours
+		y = 1
+		x = -1
+
+		cost = 5
+		
+		available = {
+			has_war = no
+			is_neighbor_of = TEX
+		}
+		bypass = {
+			NOT = {
+				country_exists = TEX
+			}
+		}
+		
+		prerequisite =	{ focus = USA_mc_the_west_is_ours }
+		
+		completion_reward = {
+		TEX = {	
+				country_event = ccc.8
+			}
+			}
+	}
+	focus = {
+		id = USA_mc_end_the_motor_company
+		icon = GFX_focus_USA_mc_ford
+
+		relative_position_id = USA_mc_the_west_is_ours
+		y = 1
+		x = 1
+
+		cost = 5
+		
+		available = {
+			has_war = no
+			is_neighbor_of = FOC
+		}
+		bypass = {
+			NOT = {
+				country_exists = FOC
+			}
+		}
+		
+		prerequisite =	{ focus = USA_mc_the_west_is_ours }
+
+		completion_reward = {
+			declare_war_on = {
+				target = FOC
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_torture_the_racists
+		icon = GFX_focus_USA_mc_kkk
+
+		relative_position_id = USA_mc_the_west_is_ours
+		y = 2
+
+		cost = 5
+		
+		available = {
+			has_war = no
+			is_neighbor_of = KKK
+		}
+		bypass = {
+			NOT = {
+				country_exists = KKK
+			}
+		}
+		
+		prerequisite =	{ focus = USA_mc_demand_texan_annexation }
+		prerequisite =	{ focus = USA_mc_end_the_motor_company }
+
+		completion_reward = {
+			declare_war_on = {
+				target = KKK
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_offer_the_resistance_amnesty
+		icon = GFX_focus_USA_mc_amnesty
+
+		relative_position_id = USA_mc_torture_the_racists
+		y = 1
+
+		cost = 5
+		
+		available = {
+			has_war = no
+			is_neighbor_of = BRE
+		}
+		bypass = {
+			NOT = {
+				country_exists = BRE
+			}
+		}
+		
+		prerequisite =	{ focus = USA_mc_torture_the_racists }
+		
+		completion_reward = {
+		BRE = {	
+				country_event = ccc.7
+			}
+			}
+	}
+	focus = {
+		id = USA_mc_extinguish_the_fire_of_revolution
+		icon = GFX_focus_USA_mc_soc
+
+		relative_position_id = USA_mc_offer_the_resistance_amnesty
+		y = 1
+		x = -1
+
+		cost = 5
+		
+		available = {
+			has_war = no
+			is_neighbor_of = ASF
+		}
+		bypass = {
+			NOT = {
+				country_exists = ASF
+			}
+		}
+		
+		prerequisite =	{ focus = USA_mc_offer_the_resistance_amnesty }
+
+		completion_reward = {
+			declare_war_on = {
+				target = ASF
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_war_for_americas_destiny
+		icon = GFX_focus_USA_mc_final
+		relative_position_id = USA_mc_offer_the_resistance_amnesty
+		y = 1
+		x = 1
+		cost = 5
+		available = {
+			has_war = no
+		}
+		bypass = {
+			NOT = { country_exists = USA }
+			NOT = { country_exists = NEE }
+			NOT = { country_exists = PEN }
+			NOT = { country_exists = NYC }
+		}
+		prerequisite =	{ focus = USA_mc_offer_the_resistance_amnesty }
+		completion_reward = {
+			declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NEE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PEN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NYC
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = USA_mc_god_bless_american_unity
+		icon = GFX_focus_USA_mc_reunification
+
+		relative_position_id = USA_mc_offer_the_resistance_amnesty
+		y = 2
+
+		cost = 5
+		
+		available = {
+			has_war = no
+		}
+		
+		prerequisite =	{ focus = USA_mc_extinguish_the_fire_of_revolution }
+		prerequisite =	{ focus = USA_mc_war_for_americas_destiny }
+		
+		completion_reward = {
+			log = "[GetDateText]: [ROOT.GetTag]: Focus UVS_crush_the_invaders_log"
+
+                 country_event = ccc.6
+				 
+		}
+		
+	}
+	focus = {
+		id = USA_March_to_Alaska
+		icon = GFX_focus_USA_mc_reunification
+
+		relative_position_id = USA_mc_god_bless_american_unity
+		y = 2
+
+		cost = 5
+		
+		available = {
+			has_war = no
+		}
+		
+		prerequisite =	{ focus = USA_mc_god_bless_american_unity}
+		
+		completion_reward = {
+		declare_war_on = {
+target = ALA
+type = annex_everything
+}		
+		}
+		
+	}
+}
