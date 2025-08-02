@@ -20,8 +20,7 @@ news_event = {
 				country_event = {
 					id = usa_collapse.15
 					days = 14
-				}
-
+				}	
 				USA_john_d_rockfeller = {
 					retire = yes
 				}
@@ -32,9 +31,8 @@ news_event = {
 	
 	option = {
 		name = usa_collapse.1.a
-
+	}
 }
-}		
 country_event = {
 	id = usa_collapse.15
 	title = usa_collapse.15.t
@@ -52,20 +50,21 @@ country_event = {
 				id = usa_collapse.2
 				days = 14
 			}
-
 		}
 	}
 	
 	option = {
 		name = usa_collapse.15.a
 		load_focus_tree = USA_rockefeller_jr
+	hidden_effect = {
 	JAP = {
-			country_event = {
-					id = jap.1
-					days = 2
-				}
+	country_event = {
+	id =jap.1
+    days = 4
 	}
 	}
+	}
+}
 }
 country_event = { #SHIT BEGINS
 	id = usa_collapse.2
@@ -103,7 +102,7 @@ country_event = { #буржуи ебаные
 		hidden_effect = {
 			USA_release_FOC = yes
 			country_event = {
-				id = usa_collapse.10
+				#id = usa_collapse.10
 				id = usa_collapse.8
 				days = 5
 			}
@@ -115,20 +114,21 @@ country_event = { #буржуи ебаные
 	option = {
 		name = usa_collapse.5.a
 		ai_chance = {
-			factor = 1
+			factor = 100
 		}
 	}
 	option = {
 		name = usa_collapse.5.b
 		ai_chance = {
 			factor = 0
-			}
-		FOC = {
+			
+		}
+	FOC = {
 			change_tag_from = USA
 		}
-		}
 	}
-country_event = { #та самая сук мышь
+}
+#country_event = { #та самая сук мышь
 #	id = usa_collapse.10
 #	title = usa_collapse.10.t
 #	desc = usa_collapse.10.d

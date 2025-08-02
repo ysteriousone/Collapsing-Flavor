@@ -1,0 +1,18 @@
+add_namespace = ford_alt
+
+country_event = {
+	id = ford_alt.1
+	title = ford_alt.1.t
+	desc = ford_alt.1.d
+	picture = GFX_report_event_mutiny
+	major = yes
+	is_triggered_only = yes
+log = "[GetDateText]: [Root.GetName]: event ford_alt.1"
+	
+	option = {
+		name = ford_alt.1.a
+}
+	option = {
+		name = ford_alt.1.b
+}
+}

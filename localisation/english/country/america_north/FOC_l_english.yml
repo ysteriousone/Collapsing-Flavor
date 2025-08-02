@@ -1,14 +1,15 @@
 ﻿l_english:
  ### National Focus ###
- FOC_Ford_Company: "United Under The Ford Company"
- FOC_Flourishing_Company: "A Flourishing Company"
- FOC_New_States: "The New State"
  
  ### Party Names ###
  FOC_national_syndicalism_party: "§yFord Motor Company§!"
+ FOC_social_democrat_party: "§rDemocrats-Quentin§!"
  
  ### Events ###
-
+ ford_alt.1.t: "The Incident in Chicago"
+ ford_alt.1.a: "Present the prototype of the Mustang!"
+ ford_alt.1.b: "A shot rang across Ford's head"
+ ford_alt.1.d: "As the announcement of another Franchise location of the Ford Motor Company was announced, people gathered in curiosity. It was hard for Ford's mercenaries to maintain order but a path was cleared for the man himself and his cronies. But something was off... There was a familiar face that shot across Ford's face. It was Teddy Roosevelt! Or was it? No, Ford was hallucinating. Stress ate him up at full strength. He was even pressured by Clara to shoo away his business buddies from their home. However, he finished a drawing of a new automobile he wanted to show the public. Granted they still hated him for killing Roosevelt but what could he do? Rockefeller gave his men lots of money that even he couldn't refuse. Ford exited his car and went inside the new location to unveil something to the public and perhaps even redeem himself. But unfortunately, fate had other plans. On the sidelines lay the Roosevelt brothers, plotting their new move. "I say we blow up the place", spoke Quentin. "No, that'd be too loud. Gather the men, we're going to infiltrate the building", said Teddy. However, their chance was slipping away as Henry Ford entered the Franchise location..."
  ### National Spirits ###
 
  FOC_freikorps_collab: "Collaboration with the Freikorps"

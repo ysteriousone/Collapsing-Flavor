@@ -9,6 +9,272 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 0 y = 2000 }
+	
+		focus = {
+		id = FOC_Kansas_Industrial_Powerbase
+		icon = GFX_focus_USA_american_dream
+		x = 9
+		y = 0
+		cost = 5
+		completion_reward = {
+		373 = {
+	 add_extra_state_shared_building_slots = 4
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		}
+	}
+	}
+	focus = {
+		id = FOC_Focus_On_Automobile_Production
+		prerequisite = {
+		focus = FOC_Kansas_Industrial_Powerbase
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 7
+		y = 1
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Establish_a_Civillian_Branch
+		prerequisite = {
+		focus = FOC_Kansas_Industrial_Powerbase
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 12
+		y = 1
+		cost = 5
+		completion_reward = {
+		random_owned_state = {
+
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+			}
+		}
+	}
+	focus = {
+		id = FOC_Diversity_in_the_Factories
+		prerequisite = {
+		focus = FOC_Establish_a_Civillian_Branch
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 12
+		y = 2
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Civillian_Efforts
+		prerequisite = {
+		focus = FOC_Diversity_in_the_Factories
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 12
+		y = 3
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Invest_in_Rifle_Production
+	prerequisite = {
+		focus = FOC_Kansas_Industrial_Powerbase
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 10
+		y = 1
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Utilize_the_Steel_District
+	prerequisite = {
+		focus = FOC_Invest_in_Rifle_Production
+		focus = FOC_Focus_On_Automobile_Production
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 9
+		y = 2
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Detroit_Petrolium_and_Co
+		prerequisite = {
+		focus = FOC_Utilize_the_Steel_District
+		}
+		available = {
+		controls_state = 393
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 9
+		y = 3
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Expand_Minneapolis_Factories
+	prerequisite = {
+		focus = FOC_Detroit_Petrolium_and_Co
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 9
+		y = 4
+		cost = 5
+		completion_reward = {
+		391 = {
+		add_extra_state_shared_building_slots = 3
+		add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		}
+	}
+	}
+		focus = {
+		id = FOC_Arkansas_Petrolium_District
+	prerequisite = {
+		focus = FOC_Expand_Minneapolis_Factories
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 10
+		y = 5
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Establish_the_Springfield_District
+	prerequisite = {
+		focus = FOC_Arkansas_Petrolium_District
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 10
+		y = 6
+		cost = 5
+		completion_reward = {
+		373 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+	}
+	}
+	focus = {
+		id = FOC_Trade_deal_with_Carnagae_Steel
+	prerequisite = {
+		focus = FOC_Expand_Minneapolis_Factories
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 8
+		y = 5
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Empress_of_Ferrum
+	prerequisite = {
+		focus = FOC_Trade_deal_with_Carnagae_Steel
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 8
+		y = 6
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Increase_Dependencies_on_Carnagae_Steel
+	prerequisite = {
+		focus = FOC_Empress_of_Ferrum
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 7
+		y = 7
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Carnagae-Ford_Bund
+	prerequisite = {
+		focus = FOC_Empress_of_Ferrum
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 9
+		y = 7
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FOC_Goodnight_Henry
+	prerequisite = {
+		focus = FOC_Increase_Dependencies_on_Carnagae_Steel
+		focus = FOC_Carnagae-Ford_Bund
+		}
+		icon = GFX_focus_USA_american_dream
+		x = 8
+		y = 8
+		cost = 5
+		completion_reward = {
+		}
+	}
 
 	focus = {
 		id = FOC_starting_anew
@@ -107,6 +373,10 @@ focus_tree = {
 		prerequisite = {focus = FOC_One_Final_Blow }
 		cost = 5
 		completion_reward = {
+		country_event = {
+		id = ford_alt.1
+		days = 3
+		}
 		}
 	}
 }
