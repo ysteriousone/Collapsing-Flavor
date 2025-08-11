@@ -1,7 +1,30 @@
 add_namespace = ford_alt
 
 country_event = {
-	id = ford_alt.1
+	id = ford_alt.2 #Ford's Death attempt 1
+	title = ford_alt.2.t
+	desc = ford_alt.2.d
+	picture = GFX_report_event_mutiny
+	major = yes
+	is_triggered_only = yes
+log = "[GetDateText]: [Root.GetName]: event ford_alt.2"
+	
+	option = {
+		name = ford_alt.2.a
+	hidden_effect = {
+	FOC = {
+	set_cosmetic_tag = FOC_Carnegie
+ }
+}
+FOC = {
+set_politics = {
+	ruling_party = despotism
+}
+}
+}
+}
+country_event = {
+	id = ford_alt.1 #Ford's Death attempt 2
 	title = ford_alt.1.t
 	desc = ford_alt.1.d
 	picture = GFX_report_event_mutiny

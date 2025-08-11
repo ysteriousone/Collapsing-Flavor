@@ -101,6 +101,16 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Margaret Carnegie"
+	desc = "POLITICS_CARNEGIE_DESC"
+	picture = "gfx/leaders/FOC/Magaret_Carnegie_Miller.dds"
+	ideology = corporatocracy
+	traits = {
+		industrial_monopoly
+	}
+}
+
 add_to_american_tags = yes
 
 

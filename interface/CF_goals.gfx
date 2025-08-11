@@ -1,0 +1,14 @@
+spriteTypes = {
+    SpriteType = {
+		name = "GFX_focus_Starting_Anew"
+		texturefile = "gfx/interface/goals/starting_anew.dds"
+    }
+    SpriteType = {
+		name = "GFX_focus_Fate_of_the_Mercenaries"
+		texturefile = "gfx/interface/goals/fate_of_the_mercenaries.dds"
+    }
+    SpriteType = {
+		name = "GFX_focus_Goodnight_Henry"
+		texturefile = "gfx/interface/goals/goodnight_henry.dds"
+    } 	 	
+}

@@ -182,7 +182,7 @@ focus_tree = {
 	prerequisite = {
 		focus = FOC_Expand_Minneapolis_Factories
 		}
-		icon = GFX_focus_USA_american_dream
+		icon = GFX_focus_USA_refinery
 		x = 10
 		y = 5
 		cost = 5
@@ -268,17 +268,27 @@ focus_tree = {
 		focus = FOC_Increase_Dependencies_on_Carnagae_Steel
 		focus = FOC_Carnagae-Ford_Bund
 		}
-		icon = GFX_focus_USA_american_dream
+	available = {
+	has_government_type = national_syndicalism
+	}
+		icon = GFX_focus_Goodnight_Henry
 		x = 8
 		y = 8
 		cost = 5
 		completion_reward = {
+	custom_effect_tooltip = FOC_Goodnight_Henry_Tooltip
+	hidden_effect = {
+	country_event = {
+	id = ford_alt.2
+	days = 3
+	}
 		}
+	}
 	}
 
 	focus = {
 		id = FOC_starting_anew
-		icon = GFX_focus_USA_american_dream
+		icon = GFX_focus_Starting_Anew
 		x = 0
 		y = 0
 		cost = 5
@@ -287,7 +297,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FOC_Fate_of_The_Mercenariers
-		icon = GFX_focus_USA_american_dream
+		icon = GFX_focus_Fate_of_the_Mercenaries
 		x = 0
 		y = 1
 		prerequisite = {focus = FOC_starting_anew }

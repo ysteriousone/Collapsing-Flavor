@@ -248,6 +248,17 @@ country_event = { #идём снимать вестерны
 				id = usa_collapse.12
 				days = 7
 			}
+		TEX = {
+				declare_war_on = {
+					target = BRE
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = KKK
+					type = annex_everything
+				}
+				add_civil_war_target = KKK					
+			}
 		}
 	}
 	

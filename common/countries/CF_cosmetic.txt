@@ -1,0 +1,5 @@
+### FOC ###
+FOC_Carnegie = {
+	color = rgb {48 48 104}
+	color_ui = rgb { 48 48 104 }
+}

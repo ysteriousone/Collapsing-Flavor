@@ -1,0 +1,67 @@
+capital = 1208
+
+oob = "TEX"
+
+add_to_american_tags = yes
+
+set_research_slots = 3
+set_stability = 0.4
+
+add_1922_modern_tech = yes
+
+set_convoys = 300
+
+set_politics = {
+	ruling_party = reactionism
+}
+set_popularities = {
+	bolshevism = 2
+	marxism = 7
+	libertarian_socialism = 4
+	social_democrat = 10
+	liberalism = 11
+	conservatism = 15
+	authoritarian_democrat = 18
+	despotism = 5
+	reactionism = 17
+	national_syndicalism = 8
+	esotericism = 3
+}
+
+recruit_character = TEX_pat_morris
+recruit_character = TEX_colonel_house
+recruit_character = TEX_john_norris
+recruit_character = TEX_r_b_creager
+recruit_character = TEX_john_garner
+recruit_character = TEX_james_ferguson
+recruit_character = TEX_miriam_ferguson
+recruit_character = TEX_maury_maverick
+recruit_character = TEX_harry_wurzbach
+recruit_character = TEX_albert_burleson
+recruit_character = TEX_alvin_owsley
+recruit_character = TEX_jesse_jones
+recruit_character = TEX_william_hobby
+
+
+add_ideas = {
+	limited_gun_ownership
+	mild_rationing
+	mixed_economy
+	limited_conscription
+	limited_exports
+	state_press
+	
+	TEX_economic_shock
+	TEX_bankrupt_oil_economy
+	TEX_under_qualified_army
+	TEX_macarthurs_blessing
+	TEX_progressive_authoritarianism
+	TEX_baptist_dominance
+	TEX_kkk_activity
+}
+
+set_country_flag = gun_owner_ship_locked
+set_country_flag = press_locked
+add_to_american_tags = yes
+
+

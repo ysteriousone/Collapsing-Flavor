@@ -1,0 +1,122 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_focus_Starting_Anew_shine
+		texturefile = gfx/interface/goals/starting_anew.dds
+		effectFile = gfx/FX/buttonstate.lua
+		legacy_lazy_load = no
+		animation = {
+			animationmaskfile = gfx/interface/goals/starting_anew.dds
+			animationrotation = -90
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = add
+			animationtype = scrolling
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		animation = {
+			animationmaskfile = gfx/interface/goals/starting_anew.dds
+			animationrotation = 90
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = add
+			animationtype = scrolling
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+	}
+	spriteType = {
+		name = GFX_focus_Fate_of_the_Mercenaries_shine
+		texturefile = gfx/interface/goals/fate_of_the_mercenaries.dds
+		effectFile = gfx/FX/buttonstate.lua
+		legacy_lazy_load = no
+		animation = {
+			animationmaskfile = gfx/interface/goals/fate_of_the_mercenaries.dds
+			animationrotation = -90
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = add
+			animationtype = scrolling
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		animation = {
+			animationmaskfile = gfx/interface/goals/fate_of_the_mercenaries.dds
+			animationrotation = 90
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = add
+			animationtype = scrolling
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+	}
+		spriteType = {
+		name = GFX_focus_Goodnight_Henry_shine
+		texturefile = gfx/interface/goals/goodnight_henry.dds
+		effectFile = gfx/FX/buttonstate.lua
+		legacy_lazy_load = no
+		animation = {
+			animationmaskfile = gfx/interface/goals/goodnight_henry.dds
+			animationrotation = -90
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = add
+			animationtype = scrolling
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		animation = {
+			animationmaskfile = gfx/interface/goals/goodnight_henry.dds
+			animationrotation = 90
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = add
+			animationtype = scrolling
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+	}
+}
